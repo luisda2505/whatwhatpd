@@ -2,11 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Mujeres al Microfono Rosa Parks</title>
-    <link
-      href="css/what.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="css/what.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -23,22 +19,21 @@
         google: { families: ["Nunito Sans:regular,700,900,600italic"] },
       });
     </script>
-    <link
-      href="https://cdn.prod.website-files.com/6645c3a037dd86bb8e2d580e/6645c51f0d9c8a08322149c4_Favicon.png"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <link
-      href="https://cdn.prod.website-files.com/6645c3a037dd86bb8e2d580e/6645c524176c3f625d7649b3_Webclip.png"
-      rel="apple-touch-icon"
-    />
-    <link href="css/music_player.css" rel="stylesheet" type="text/css">
+    <link href="assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/appletouchicon.png" rel="apple-touch-icon" />
+    <link href="css/music_player.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0"
+      nonce="Es1A9Sbh"
+    ></script>
     <section
-      style="
-        background-image: url('assets/rosa-parks.jpg');
-      "
+      style="background-image: url('assets/rosa-parks.webp')"
       class="hero-section episodes"
     >
       <div class="blue-background">
@@ -77,10 +72,11 @@
                 <div class="episode-number version-2">1</div>
               </div>
               <h1 class="white episodes">Mujeres al micrófono</h1>
-              <h2 class="white episodes">Rosa Parks, la lucha contra el racismo</h2>
+              <h2 class="white episodes">
+                Rosa Parks, la lucha contra el racismo
+              </h2>
               <div class="w-layout-hflex message episodes">
-                <div class="w-layout-hflex buttons-horizont">
-                </div>
+                <div class="w-layout-hflex buttons-horizont"></div>
               </div>
             </div>
           </div>
@@ -92,39 +88,68 @@
                 <div class="loading">
                   <div class="spinner"></div>
                 </div>
-                <div class="play-pause-btn">  
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
-                    <path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
+                <div class="play-pause-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="24"
+                    viewBox="0 0 18 24"
+                  >
+                    <path
+                      fill="#566574"
+                      fill-rule="evenodd"
+                      d="M18 12L0 24V0"
+                      class="play-pause-icon"
+                      id="playPause"
+                    />
                   </svg>
                 </div>
-            
+
                 <div class="controls">
                   <span class="current-time">0:00</span>
                   <div class="slider" data-direction="horizontal">
                     <div class="progress">
-                      <div class="pin" id="progress-pin" data-method="rewind"></div>
+                      <div
+                        class="pin"
+                        id="progress-pin"
+                        data-method="rewind"
+                      ></div>
                     </div>
                   </div>
                   <span class="total-time">0:00</span>
                 </div>
-            
+
                 <div class="volume">
                   <div class="volume-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path fill="#566574" fill-rule="evenodd" d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z" id="speaker"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#566574"
+                        fill-rule="evenodd"
+                        d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z"
+                        id="speaker"
+                      />
                     </svg>
                   </div>
                   <div class="volume-controls hidden">
                     <div class="slider" data-direction="vertical">
                       <div class="progress">
-                        <div class="pin" id="volume-pin" data-method="changeVolume"></div>
+                        <div
+                          class="pin"
+                          id="volume-pin"
+                          data-method="changeVolume"
+                        ></div>
                       </div>
                     </div>
                   </div>
                 </div>
-            
+
                 <audio>
-                  <source src="assets/mam1.mp3" type="audio/mpeg">
+                  <source src="assets/mam1.mp3" type="audio/mpeg" />
                 </audio>
               </div>
             </div>
@@ -134,23 +159,35 @@
     </section>
     <section class="content-section">
       <div class="w-richtext">
-        <h2>El “No” que cambió la historia: Reseña de Rosa Parks, la lucha contra el racismo </h2>
-        <p>
-          “Rosa Parks, la lucha contra el racismo”, es una obra alucinante y
-          conmovedora, ya que nos narra la gran vida de la icónica mujer escrita
-          por la gran autora Paola Capriolo. Fue publicada en el 2014, Capriolo
-          nos cuenta la vida tan difícil que llevó Rosa Parks, una gran mujer
-          afroamericana que se negó a dar su asiento en un autobús segregado,
-          desafiando las leyes que habían en esa época. Esta obra nos transporta
-          a los tiempos en el que reinaba el racismo y la discriminacion hacia
-          los afroamericanos, donde destaca la gran valentía y la determinación
-          de Rosa y como ella inspiró a todo una comunidad que por fin levantó
-          la voz contra la opresión. En la reseña, sostenemos que “Rosa Parks,
-          la lucha contra el racismo”, no solo nos habla de la biografía de
-          Rosa, sino que también tiene una profunda exploración e información
-          sobre la desigualdad e injusticia racial que se daba en los Estados
-          Unidos en la época de 1950.
-        </p>
+        <h2>
+          El “No” que cambió la historia: Reseña de Rosa Parks, la lucha contra
+          el racismo
+        </h2>
+        <div class="figure-paragraph">
+          <p>
+            “Rosa Parks, la lucha contra el racismo”, es una obra alucinante y
+            conmovedora, ya que nos narra la gran vida de la icónica mujer escrita
+            por la gran autora Paola Capriolo. Fue publicada en el 2014, Capriolo
+            nos cuenta la vida tan difícil que llevó Rosa Parks, una gran mujer
+            afroamericana que se negó a dar su asiento en un autobús segregado,
+            desafiando las leyes que habían en esa época. Esta obra nos transporta
+            a los tiempos en el que reinaba el racismo y la discriminacion hacia
+            los afroamericanos, donde destaca la gran valentía y la determinación
+            de Rosa y como ella inspiró a todo una comunidad que por fin levantó
+            la voz contra la opresión. En la reseña, sostenemos que “Rosa Parks,
+            la lucha contra el racismo”, no solo nos habla de la biografía de
+            Rosa, sino que también tiene una profunda exploración e información
+            sobre la desigualdad e injusticia racial que se daba en los Estados
+            Unidos en la época de 1950.
+          </p>
+          <div class="figure-reference">
+            <p class="figure-id">Figura 1</p>
+            <i class="figure-name">Portada de la obra de Paola Capriolo</i>
+            <img src="assets/rosa_parks_portada.webp" loading="lazy" alt="Portada del libro Rosa Parks">
+            <p class="figure-note" ><i>Nota.</i> La figura muesta la cubierta de la obra.</p>
+            <p class="figure-source">Fuente: Librería Lolita</p>
+          </div>
+        </div>
         <p>&zwj;</p>
         <p>
           Esta obra presenta una trama principalmente centrada en la lucha por
@@ -204,17 +241,109 @@
           positivo de la sociedad en la que vivimos.
         </p>
         <p>&zwj;</p>
-        <p>
-          En conclusión, "Rosa Parks, la lucha contra el racismo" de Paola
-          Capriolo es una obra conmovedora que cautiva al lector desde el
-          principio con su narrativa junto a las valiosas lecciones importantes
-          sobre el coraje, la esperanza y la determinación de Rosa. A través
-          todas sus páginas, Capriolo nos invita a reflexionar sobre la
-          importancia de la igualdad, la justicia y el valor personal,
-          recordándonos que todos tenemos el poder de generar un cambio positivo
-          y contribuir a la comunidad en general.
-        </p>
+        <div class="figure-paragraph">
+          <div class="figure-reference">
+            <p class="figure-id">Figura 2</p>
+            <i class="figure-name">El asiento de un cambio</i>
+            <img src="assets/rosa-parks-canva.webp" loading="lazy" alt="Portada del libro Rosa Parks">
+            <p class="figure-note" ><i>Nota.</i> Rosa Parks sentada tranquilamente en un autobús.</p>
+            <p class="figure-source">Fuente: Canva IA</p>
+          </div>
+          <p>
+            En conclusión, "Rosa Parks, la lucha contra el racismo" de Paola
+            Capriolo es una obra conmovedora que cautiva al lector desde el
+            principio con su narrativa junto a las valiosas lecciones importantes
+            sobre el coraje, la esperanza y la determinación de Rosa. A través
+            todas sus páginas, Capriolo nos invita a reflexionar sobre la
+            importancia de la igualdad, la justicia y el valor personal,
+            recordándonos que todos tenemos el poder de generar un cambio positivo
+            y contribuir a la comunidad en general.
+          </p>
+        </div>
         <p>&zwj;</p>
+      </div>
+    </section>
+    <section id="FAQ" class="scrolling-quotes-container">
+      <div
+        data-w-id="cea0b301-a43e-62c0-fd5f-483d5b259ee8"
+        style="
+          opacity: 1;
+          transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+            rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+        "
+        class="w-layout-blockcontainer faq-container w-container"
+      >
+        <div class="faq">
+          <div class="faq-section-title">
+            <p class="section-sign white">Everything there is to know</p>
+            <h2 class="section-heading white">Referencias</h2>
+          </div>
+          <div class="faq-list-wrapper w-dyn-list">
+            <div role="list" class="faq-list w-dyn-items">
+              <div role="listitem" class="faq-item w-dyn-item">
+                <div class="faq-wrapper">
+                  <div class="faq-question-wrapper">
+                    <div class="question">
+                      Capriolo, P. (2018). Rosa Parks: La lucha contra el racismo (5a reimpresión). Vicens Vives, S.A.
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="faq-item w-dyn-item">
+                  <div class="faq-wrapper">
+                    <div class="faq-question-wrapper">
+                      <div class="question">
+                        Lee, M. S. (2020, 19de enero). Opinión: Aprendiendo de Rosa Park. The Detroit New. https://www.detroitnews.com/story/opinion/2020/01/19/opinion-learning-rosa-parks/4491251002/
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="faq-item w-dyn-item">
+                  <div class="faq-wrapper">
+                    <div class="faq-question-wrapper">
+                      <div class="question">
+                        Librería Lolita (s.f.) Portada de la obra de Paola Capriolo [Imagen]. https://librerialolita.com/producto/rosa-parks-la-lucha-contra-el-racismo-2/
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="fb-comments"
+      data-href="https://whatwhatpd.vercel.app/"
+      data-width=""
+      data-numposts="5"
+    ></div>
+    <section class="footer-section">
+      <div class="w-layout-blockcontainer footer-container w-container">
+        <div class="footer">
+          <div class="footer-content">
+            <div class="logo-section">
+              <a href="https://whatwhatpd.vercel.app/index.html" class="logo-container w-inline-block"
+                ><img
+                  src="assets/logo_what.svg"
+                  loading="lazy"
+                  alt="Logotype for our podcast, What what"
+                  class="logo"
+              /></a>
+            </div>
+            <div class="footer-links-container">
+              <div class="footer-links-block">
+                <div class="small-text bold white">Archivo de podcast</div>
+                <div class="footer-links">
+                  <a href="/all-episodes" class="footer-link"
+                    >Mujeres al micrófono</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script type="text/javascript" src="js/music_player.js"></script>
