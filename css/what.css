@@ -1772,6 +1772,11 @@ html {
   .w-richtext ul {
       overflow: hidden
   }
+
+  .w-richtext p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
   
   .w-richtext .w-richtext-figure-selected.w-richtext-figure-type-video div:after,
   .w-richtext .w-richtext-figure-selected[data-rt-type=video] div:after,
@@ -3496,7 +3501,7 @@ html {
   }
   
   .scrolling-quotes-container {
-      background-image: url(https://cdn.prod.website-files.com/6645c3a037dd86bb8e2d580e/6645cbabd583579cf9e45980_quote.svg);
+      background-image: url(../assets/quotes.svg);
       background-position: 10%;
       background-repeat: no-repeat;
       background-size: contain;
@@ -3504,9 +3509,9 @@ html {
       justify-content: center;
       align-items: flex-start;
       min-height: 80vh;
-      margin-top: 60px;
-      margin-bottom: 120px;
-      padding: 200px 0;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      /* padding: 50px 0; */
       display: flex;
       overflow: hidden
   }
@@ -4487,11 +4492,11 @@ html {
           width: 100%
       }
       .scrolling-quotes-container {
-          min-height: 70vh;
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-top: 0;
-          padding-bottom: 0
+          min-height: 45vh;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;
       }
       .sticky-host-image {
           min-height: 1200px
@@ -5233,4 +5238,42 @@ html {
           padding-left: 20px;
           padding-right: 20px
       }
+  }
+  
+  .figure-paragraph{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .figure-paragraph p{
+    width: 68%;
+  }
+
+  .figure-reference{
+    width: 250px;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .figure-reference img{
+    max-width: 80%;
+  }
+
+  .figure-paragraph .figure-id{
+    font-weight: 800;
+    width: 100%;
+  }
+
+  .figure-paragraph .figure-name{
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .figure-paragraph .figure-note{
+    margin-bottom: 0;
+    letter-spacing: -1px;
+    width: 100%;
   }
